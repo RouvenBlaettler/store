@@ -1,3 +1,4 @@
 {
-  "python.pythonPath": "/home/ifarmapples/snap/code/217/.local/share/virtualenvs/store-DBRNgRTZ/bin/python"
+  "python.pythonPath": "/home/ifarmapples/snap/code/217/.local/share/virtualenvs/store-DBRNgRTZ/bin/python",
+  "sqlite.sqlite3": "/usr/bin/sqlite3"
 }

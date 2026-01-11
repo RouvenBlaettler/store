@@ -2,8 +2,9 @@ from django.db import models
 
 class Product(models.Model):
     title = models.CharField(max_length=255)    #varchar(255)
+    slug = models.SlugField()                   #slug
     description = models.TextField()             #text
-    price = models.DecimalField(max_digits=6, decimal_places=2)  #decimal
+    unit_price = models.DecimalField(max_digits=6, decimal_places=2)  #decimal
     inventory = models.IntegerField()            #int
     last_update = models.DateTimeField(auto_now=True)  #timestamp
     collection = models.ForeignKey('Collection', on_delete=models.PROTECT)
@@ -43,6 +44,7 @@ class Order(models.Model):
 class Address(models.Model):
     street = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
+    zip = models.CharField(max_length=10)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
 class Collection(models.Model):
